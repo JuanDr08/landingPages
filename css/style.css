@@ -34,7 +34,7 @@ body{
     grid-area: titulo;
 }
 .item_1 h1{
-    font-size: 7.5rem;
+    font-size: 7rem;
     line-height: 1;
     font-weight: normal;
     color: var(--color-ternary);
@@ -158,5 +158,6 @@ body{
         width: 33.33vw;
     }
     .item_4 button {
+        font-size: 3vw;
     }
 }
