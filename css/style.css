@@ -6,44 +6,112 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto slab', serif;
+    color: var(--color-font);
 }
 
 body {
+    position: relative;
     display: grid;
+    width: 100%;
     background: var(--color-primary);
     height: 100vh;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    margin: 0 64px;
+    padding: 0 4vw;
     grid-template-areas: 
-    ".fnd fnd fnd"
-    "sun fnd fnd fnd"
-    "sun fnd fnd fnd"
-    "sun fnd fnd fnd"
-    ". fnd fnd fnd"
-    ". fnd fnd fnd"
-    ". fnd fnd fnd"
     ". . . ."
+    ". . . txt_1"
+    " titl titl . ."
+    " titl titl . ."
+    "prrf prrf . ."
+    "btn .  txt_2 ."
     ". . . ."
-    ". . . ."
+    "bx_1 bx_2 bx_3 bx_4"
+    "bx_1 bx_2 bx_3 bx_4"
+    "bx_1 bx_2 bx_3 bx_4"
     ;
 }
-
 .fnd {
-    display: flex;
-    justify-content: flex-end;
-    grid-area: fnd;
+    position: absolute;
+    z-index: -2;
+    right: 0;
 }
 .fnd img {
-    width: 70%;
     height: 95%;
 }
 .sun {
-    width: 200px;
-    height: 200px;
+    position: absolute;
+    z-index: -1;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
     background: var(--color-sun);
     box-shadow: 0 0 150px var(--color-sunshdw);
-    margin-top: 50px;
-    grid-area: sun;
+    top: 15%;
+}
+.item_1 {
+    background: red;
+    grid-area: titl;
+}
+.item_2 {
+    background: green;
+    grid-area: prrf;
+}
+.item_3 {
+    background: blue;
+    grid-area: btn;
+}
+.item_4 {
+    background: darkblue;
+    grid-area: bx_1;
+}
+.item_5 {
+    background: darkcyan;
+    grid-area: bx_2;
+}
+.item_6 {
+    background: darkgoldenrod;
+    grid-area: bx_3;
+}
+.item_7 {
+    background: darkgreen;
+    grid-area: bx_4;
+}
+.item_8 {
+    background: darkmagenta;
+    grid-area: txt_1;
+}
+.item_9 {
+    background: darkred;
+    grid-area: txt_2;
+}
+
+@media (width <= 1000px){
+    body {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "titl titl titl"
+        "prrf prrf prrf"
+        ". btn ."
+        "txt_1 . txt_2"
+        "bx_1 bx_2 bx_3"
+        ". bx_4 ."
+
+        ;
+        padding: 0 4vw;
+    }
+    .fnd {
+        width: 100%;
+        top: 0;
+        height: 50vh;
+    }
+    .fnd img{
+        width: 100%;
+        height: 75%;
+        object-fit: contain;
+    }
+    .sun {
+        top: 0;
+    }
 }
