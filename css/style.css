@@ -51,25 +51,26 @@ body {
     right: 81%;
 }
 .item_1 {
-    background: red;
+    /* background: red; */
     grid-area: titl;
     display: flex;
     justify-content: center;
 }
 .item_1 h1 {
     font-size: 5vw;
-    line-height: 1;
 }
 .item_2 {
-    background: green;
+    /* background: green; */
     grid-area: prrf;
 }
 .item_2 p {
+    margin-top: 10vh;
     font-size: 1.5vw;
     font-weight: normal;
 }
 .item_3 {
-    background: blue;
+    /* background: blue; */
+    margin-top: 5vh;
     grid-area: btn;
 }
 .item_3 button {
@@ -99,16 +100,25 @@ body {
 }
 .item_4, .item_5, .item_6, .item_7 {
     position: relative;
-    height: 25vh;
+    height: 22vh;
     display: flex;
     margin: 0 1vw;
 }
 .card {
-    height: 100%;
-    background: linear-gradient(180deg, rgb(75, 75, 75), rgb(17, 17, 17));
+    height: max-content;
+    background: linear-gradient(180deg, rgb(46, 46, 46), rgb(17, 17, 17));
     border: 1px solid rgba(255, 255, 255, 0.418);
     border-radius: 10px;
     box-shadow: inset 10px 10px 20px #424242;
+    font-size: 1vw;
+}
+.card p, h3, img {
+    padding: 0 1vw;
+    padding-top: 1vw;
+}
+.card p {
+    font-weight: lighter;
+    padding-bottom: 2vw;
 }
 .item_8 {
     background: darkmagenta;
