@@ -1,2 +1,18 @@
 @import url(variables.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto slab', serif;
+}
+
+body {
+    display: grid;
+    background: var(--color-primary);
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    margin: 0 64px;
+}
