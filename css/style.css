@@ -15,4 +15,35 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(10, 1fr);
     margin: 0 64px;
+    grid-template-areas: 
+    ".fnd fnd fnd"
+    "sun fnd fnd fnd"
+    "sun fnd fnd fnd"
+    "sun fnd fnd fnd"
+    ". fnd fnd fnd"
+    ". fnd fnd fnd"
+    ". fnd fnd fnd"
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ;
+}
+
+.fnd {
+    display: flex;
+    justify-content: flex-end;
+    grid-area: fnd;
+}
+.fnd img {
+    width: 70%;
+    height: 95%;
+}
+.sun {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--color-sun);
+    box-shadow: 0 0 150px var(--color-sunshdw);
+    margin-top: 50px;
+    grid-area: sun;
 }
