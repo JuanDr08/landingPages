@@ -47,35 +47,68 @@ body {
     border-radius: 50%;
     background: var(--color-sun);
     box-shadow: 0 0 150px var(--color-sunshdw);
-    top: 15%;
+    top: 10%;
+    right: 81%;
 }
 .item_1 {
     background: red;
     grid-area: titl;
+    display: flex;
+    justify-content: center;
+}
+.item_1 h1 {
+    font-size: 5vw;
+    line-height: 1;
 }
 .item_2 {
     background: green;
     grid-area: prrf;
 }
+.item_2 p {
+    font-size: 1.5vw;
+    font-weight: normal;
+}
 .item_3 {
     background: blue;
     grid-area: btn;
 }
+.item_3 button {
+    height: 3vw;
+    width: 10vw;
+    color: var(--color-primary);
+    font-weight: bolder;
+    border-radius: 50px;
+    font-size: 1vw;
+    border: none;
+}
 .item_4 {
-    background: darkblue;
+    /* background: darkblue; */
     grid-area: bx_1;
 }
 .item_5 {
-    background: darkcyan;
+    /* background: darkcyan; */
     grid-area: bx_2;
 }
 .item_6 {
-    background: darkgoldenrod;
+    /* background: darkgoldenrod; */
     grid-area: bx_3;
 }
 .item_7 {
-    background: darkgreen;
+    /* background: darkgreen; */
     grid-area: bx_4;
+}
+.item_4, .item_5, .item_6, .item_7 {
+    position: relative;
+    height: 25vh;
+    display: flex;
+    margin: 0 1vw;
+}
+.card {
+    height: 100%;
+    background: linear-gradient(180deg, rgb(75, 75, 75), rgb(17, 17, 17));
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    border-radius: 10px;
+    box-shadow: inset 10px 10px 20px #424242;
 }
 .item_8 {
     background: darkmagenta;
