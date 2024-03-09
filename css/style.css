@@ -45,7 +45,7 @@ body {
 .title h1 {
     grid-area: titulo;
     color: var(--color-font);
-    font-size: 7.5em;
+    font-size: 5em;
     text-transform: uppercase;
 }
 .prrf {
@@ -84,6 +84,7 @@ body {
     "1 2 3"
     ;
     overflow-x: scroll;
+    height: max-content;
 }
 .crd div:first-child {
     grid-area: "1";
@@ -108,9 +109,16 @@ body {
     font-weight: lighter;
 }
 
-@media (height = 600px), (height = 800px) {
-    .crd {
-        height: max-content;
+@media (height = 600px) {
+    .title h1 {
+        font-size: 3em;
+    }
+    .prrf p {
+        font-size: 1em;
+    }
+    .prrf button {
+        padding: 10px 0;
+        width: 200px;
     }
 }
 @media (width <= 820px) {
