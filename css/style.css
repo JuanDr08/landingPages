@@ -39,6 +39,9 @@ body {
     "titulo titulo . . ."
     ;
 }
+.title h1 {
+    grid-area: titulo;
+}
 .prrf {
     grid-area: prrf;
     display: grid;
@@ -70,5 +73,20 @@ body {
     .fnd {
         background-size: cover;
         background-position-x: 75%;
+    }
+    .fnd {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "title"
+        "prrf"
+        "crd"
+        ;
+    }
+    .title {
+        grid-template-columns: 1fr;
+    }
+    .prrf {
+        grid-template-columns: 1fr;
     }
 }
