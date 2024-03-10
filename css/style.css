@@ -64,3 +64,20 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
 }
+
+
+
+@media (width <= 820px) {
+    .fnd {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr) 1fr 50px;
+        grid-template-areas: 
+        "title"
+        "prrf"
+        "imp"
+        "scl"
+        ;
+        padding: 30px;
+    }
+}
