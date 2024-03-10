@@ -11,6 +11,8 @@
 
 body {
     height: 100vh;
+    width: 100vw;
+    overflow-x: scroll;
 }
 .fnd {
     height: 100%;
@@ -36,9 +38,18 @@ body {
     display: flex;
     flex-direction: column;
     grid-area: scl;
+    justify-content: space-evenly;
 }
+.scl i {
+    font-size: 2.5em;
+}
+
 .title {
     grid-area: title;
+    
+}
+.title h1 {
+    font-size: 4.5vw;
     text-align: end;
 }
 .prrf {
@@ -46,26 +57,76 @@ body {
     display: grid;
     text-align: end;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 75px;
     grid-template-areas: 
     "p p"
     ". btn"
     ;
+    justify-items: end;
 }
-.prrf p {
+.prrf > div {
     grid-area: p;
+    font-size: 1.7em;
+    width: 90%;
 }
 .prrf button{
     grid-area: btn;
+    background: var(--color-fontPrimary);
+    color: var(--color-fontSecundary);
+    width: 250px;
+    padding: 20px 0;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 50px;
 }
 .imp {
     grid-area: imp;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    grid-template-areas: 
+    "1 2 3"
+    ;
+    overflow-x: scroll;
+    align-items: center;
+}
+.imp div:nth-child(2) {
+    grid-area: "2";
+}
+.imp div:last-child {
+    grid-area: "3";
+}
+.imp div {
+    font-size: 1.2em;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+}
+.imp div p {
+    border-left: solid 10px var(--color-fontPrimary);
+    width: 400px;
+    padding-left: 2vw;
 }
 
 
+@media (height = 600px) {
+    .title h1{
+        font-size: 2.7em;
+        margin-bottom: 10px;
+    }
+    .prrf {
+        align-items: end;
+        height: max-content;
+    }
+    .prrf > div {
+        font-size: 1em;
+    }
+    .prrf button {
+        padding: 0;
+        height: 50px;
+        width: 200px;
+    }
+}
 
 @media (width <= 820px) {
     .fnd {
@@ -78,6 +139,42 @@ body {
         "imp"
         "scl"
         ;
-        padding: 30px;
+        padding: 0;
+    }
+    .scl {
+        flex-direction: row;
+        align-items: center;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    .prrf {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 75px;
+        grid-template-areas: 
+        "p"
+        "btn"
+        ;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+    .prrf > div p{
+        width: 100%;
+        font-size: 2vh;
+    }
+    .prrf button {
+        width: 200px;
+        padding: 15px 0;
+        font-size: 1em;
+    }
+    .imp div:first-child {
+        padding-left: 10px;
     }
 }
