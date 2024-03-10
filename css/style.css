@@ -6,4 +6,61 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
+    color: var(--color-fontPrimary);
+}
+
+body {
+    height: 100vh;
+}
+.fnd {
+    height: 100%;
+    background: url(../storage/img/BG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    padding: 64px;
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    "scl title title"
+    "scl prrf prrf"
+    "scl prrf prrf"
+    ". . ."
+    "imp imp imp"
+    ;
+}
+.scl {
+    display: flex;
+    flex-direction: column;
+    grid-area: scl;
+}
+.title {
+    grid-area: title;
+    text-align: end;
+}
+.prrf {
+    grid-area: prrf;
+    display: grid;
+    text-align: end;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas: 
+    "p p"
+    ". btn"
+    ;
+}
+.prrf p {
+    grid-area: p;
+}
+.prrf button{
+    grid-area: btn;
+}
+.imp {
+    grid-area: imp;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
