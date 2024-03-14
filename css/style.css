@@ -28,27 +28,18 @@ body {
 
 .title {
     grid-area: title;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 50px;
+    align-items: center;
 }
-
-.crds {
-    grid-area: crds;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-    "crdizq1 crdder1"
-    "crdizq2 crdder2"
-    ;
+.title h1 {
+    text-transform: capitalize;
+    font-size: 6.5em;
 }
-.card-izq:first-child {
-    grid-area: crdizq1;
-}
-.card-izq:last-child {
-    grid-area: crdizq2;
-}
-.card-der:first-child {
-    grid-area: crdder1;
-}
-.card-der:last-child {
-    grid-area: crdder2;
+.title p {
+    font-size: 1.4em;
+    width: 80%;
 }
