@@ -5,4 +5,50 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Mono", monospace;
+    color: var(--color-primary);
+}
+body {
+    padding: 64px;
+    background: var(--color-back);
+}
+.fnd {
+    height: 100%;
+    background: url(../storage/img/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "title title"
+    "crds crds"
+    ;
+}
+
+.title {
+    grid-area: title;
+}
+
+.crds {
+    grid-area: crds;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "crdizq1 crdder1"
+    "crdizq2 crdder2"
+    ;
+}
+.card-izq:first-child {
+    grid-area: crdizq1;
+}
+.card-izq:last-child {
+    grid-area: crdizq2;
+}
+.card-der:first-child {
+    grid-area: crdder1;
+}
+.card-der:last-child {
+    grid-area: crdder2;
 }
